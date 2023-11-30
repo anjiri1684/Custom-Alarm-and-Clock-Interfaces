@@ -1,0 +1,74 @@
+<!doctype html>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Clock and Alarm</title>
+      </head>
+      <body onload="updateclock(); setInterval('updateclock()',1000)">
+
+        <div class="container">
+            <div class="section">
+                <!-- current time -->
+                <div class="time">
+                    <div id="clock">
+
+                    </div>
+                        <div id="clock2">
+
+                    </div>
+                </div>
+            </div>
+                <div class=" section calendar">
+                    <div class="calendar-header">
+                        <span class="month-picker" id="month-picker">January</span>
+                        <div class="year-picker">
+                            <span class="year-change" id="prev-year">
+                                <pre><</pre>
+                            </span>
+                            <span id="year">2023</span>
+                            <span class="year-change" id="next-year">
+                                <pre>></pre>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="calendar-week-day">
+                            <div>S</div>
+                            <div>M</div>
+                            <div>T</div>
+                            <div>W</div>
+                            <div>Th</div>
+                            <div>F</div>
+                            <div>Sa</div>
+                        </div>
+                        <div class="calendar-days"></div>
+                    </div>
+                    <div class="month-list"></div>
+                </div>
+            <div class="section alarm">
+                    <h3> Set Alarm </h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="alarm" name="alarm" placeholder="YYYY-MM-DD  HH:MM:SS">
+                        </div>
+                        <div class="buttons">
+                            <button type="submit" class="btn" id="alarmsubmit">Set alarm</button>
+                            <button type="submit" class="btn" id="alarmstop" onclick="stop()">Stop</button>
+                        </div>
+                    </form>
+            </div>
+            <div class="alarmAlert"></div>
+        </div>
+    </div>
+
+
+      <audio id="my-audio" controls style="display:none">
+        <source src="https://amazing-js-project.netlify.app/clock%20and%20alarm/audios/alarm.mp3" type="audio/mpeg">
+      </audio>
+	<script src="script.js"></script>
+      </body>
+    </html>
